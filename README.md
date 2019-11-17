@@ -22,8 +22,8 @@ more specific error messages to the logs or the view).
 defmodule MyApp.Post.Policy do
   use AuthZ.Authorizer
 
-  alias DrivingLicense.Accounts.User
-  alias DrivingLicense.Blog.Post
+  alias MyApp.Accounts.User
+  alias MyApp.Blog.Post
 
   @unauthorized {:error, :unauthorized}
 
@@ -50,7 +50,7 @@ receive a `Plug.Conn` struct and an atom identifying the set of routes that requ
 authentication; `handle_authorization/3` additionally receives the logged in user.
 
 ```elixir
-defmodule MyAppWeb.Plugs.EnsureAuthenticated do
+defmodule MyAppWeb.Plugs.EnsureAuthorized do
   use AuthZ.AuthorizationPlugMixin
 
   import Plug.Conn
