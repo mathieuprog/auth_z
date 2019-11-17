@@ -91,7 +91,7 @@ Add `auth_z` for Elixir as a dependency in your `mix.exs` file:
 ```elixir
 def deps do
   [
-    {:auth_z, "~> 0.1.0"}
+    {:auth_z, "~> 0.2.0"}
   ]
 end
 ```
