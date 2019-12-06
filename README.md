@@ -47,7 +47,7 @@ Authorization can be enforced for some routes. Create a module using (`use`) the
 `AuthZ.AuthorizationPlugMixin` module; then implement the callbacks
 `handle_authentication_error/2` and `handle_authorization/3`. Both callbacks
 receive a `Plug.Conn` struct and an atom identifying the set of routes that require
-authentication; `handle_authorization/3` additionally receives the logged in user.
+authorization; `handle_authorization/3` additionally receives the logged in user.
 
 ```elixir
 defmodule MyAppWeb.Plugs.EnsureAuthorized do
